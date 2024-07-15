@@ -28,3 +28,23 @@ You can install these dependencies using pip:
 ```bash
 pip install keras tensorflow opencv-python dlib imutils numpy matplotlib scikit-learn
 ```
+## Usage
+
+### Ageing Sign Detection
+
+#### Load Model
+Load the pre-trained model and weights:
+```python
+json_file = open("path to model.json file", "r")
+loaded_model_json = json_file.read()
+json_file.close()
+loaded_model = model_from_json(loaded_model_json)
+loaded_model.load_weights("path to weights.h5 file")
+```
+
+## Detect Signs
+## Detect faces and predict ageing sign
+```python
+image = cv2.imread("path to image")
+face_cascade = cv2.CascadeClassifier("path to cascade.xml file")
+```
